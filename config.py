@@ -15,7 +15,7 @@ class Config:
 '''
 import os
 from datetime import timedelta
-
+from sqlalchemy import create_engine
 
 
 class Config:
@@ -25,3 +25,10 @@ class Config:
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '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')
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=30)
 
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URI,
+    pool_recycle=280,
+    pool_pre_ping=True,
+    pool_size=1,
+    max_overflow=0
+)
