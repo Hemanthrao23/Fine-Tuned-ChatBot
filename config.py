@@ -26,7 +26,7 @@ class Config:
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=30)
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URI,
+    Config.SQLALCHEMY_DATABASE_URI,
     pool_recycle=280,
     pool_pre_ping=True,
     pool_size=1,
