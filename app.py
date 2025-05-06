@@ -126,6 +126,10 @@ def get_chatgpt_response(message):
         print(f"Error calling OpenAI API: {e}")
         return "Sorry, I'm having trouble responding right now."
 
+@app.route("/")
+def home():
+    return "Hello from Flask on Render!"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
