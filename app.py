@@ -128,7 +128,12 @@ def get_chatgpt_response(message):
 
 @app.route("/")
 def home():
-    return "Hello from Flask on Render!"
+    return "Welcome!"
+
+@app.route("/about")
+def about():
+    return "About page"
+
 
 
 if __name__ == '__main__':
