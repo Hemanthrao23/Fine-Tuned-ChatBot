@@ -20,7 +20,7 @@ from datetime import timedelta
 
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY', 'Hemanth1234')
-    SQLALCHEMY_DATABASE_URI = 'SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://sql5777226:n6zpuWa3Jw@sql5.freesqldatabase.com:3306/sql5777226'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://sql5777226:n6zpuWa3Jw@sql5.freesqldatabase.com:3306/sql5777226'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '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')
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=30)
